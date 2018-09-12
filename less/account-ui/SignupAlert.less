@@ -1,0 +1,9 @@
+@import (once) "../utils/breakpoints.less";
+
+.Alert {
+  &.alert-mobile-only {
+    .breakpoint-desktop ({
+      display:none;
+    });
+  }
+}

@@ -1,0 +1,23 @@
+@import (once) "../utils/colours.less";
+
+.ErrorText {
+  transition-property: opacity, height;
+  transition-duration: 0.4s, 0.4s;
+  color: @error-colour;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2em;
+
+  &.inactive {
+    opacity: 0;
+    height: 0em;
+  }
+
+  &.active {
+    opacity: 1;
+    height: 1em;
+  }
+}

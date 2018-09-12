@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial|Work+Sans');
+.shadows-light {
+  box-shadow: 0 64px 64px 0 rgba(58, 70, 92, 0.1), 0 32px 32px 0 rgba(58, 70, 92, 0.1), 0 16px 16px 0 rgba(58, 70, 92, 0.1), 0 8px 8px 0 rgba(58, 70, 92, 0.1);
+}
+.shadows-light-hover {
+  box-shadow: 0 64px 64px 16px rgba(58, 70, 92, 0.1), 0 32px 32px 8px rgba(58, 70, 92, 0.1), 0 16px 16px 4px rgba(58, 70, 92, 0.1), 0 8px 8px 2px rgba(58, 70, 92, 0.1);
+}
+.shadows-modal {
+  box-shadow: 0px 30px 75px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 30px 75px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 30px 75px 0px rgba(0, 0, 0, 0.15);
+}
+.rounded-corners {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.rounded-corners-buttons {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.heading-primary {
+  font-family: "Questrial", sans-serif;
+  color: black;
+  line-height: 85%;
+  text-transform: uppercase;
+}
+.body-text {
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  font-size: 16px;
+}
+.placeholder-text {
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  font-size: 16px;
+  color: #404040;
+}
+.small-text {
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  font-size: 16px;
+  font-size: 13px;
+}
+.Alert {
+  transition: height 0.4s;
+  background-color: grey;
+  font-size: calc(10px + 0.5vw);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Alert.inactive {
+  height: 0px;
+}
+.Alert.active {
+  height: 35px;
+}
+.Alert.positive {
+  background-color: green;
+}
+.Alert.negative {
+  background-color: red;
+}
+.Button {
+  padding: 0;
+  border: 0;
+  margin: 10px 0;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  color: #253237;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  height: 50px;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 64px 64px 0 rgba(58, 70, 92, 0.1), 0 32px 32px 0 rgba(58, 70, 92, 0.1), 0 16px 16px 0 rgba(58, 70, 92, 0.1), 0 8px 8px 0 rgba(58, 70, 92, 0.1);
+  -webkit-tap-highlight-color: transparent;
+  transition: box-shadow 0.4s;
+  text-decoration: none;
+}
+.Button:hover,
+.Button:focus {
+  box-shadow: 0 64px 64px 16px rgba(58, 70, 92, 0.1), 0 32px 32px 8px rgba(58, 70, 92, 0.1), 0 16px 16px 4px rgba(58, 70, 92, 0.1), 0 8px 8px 2px rgba(58, 70, 92, 0.1);
+  text-decoration: none;
+}
+.Button:hover span,
+.Button:focus span {
+  text-decoration: none;
+}
+.Button.primary {
+  background-color: #253237;
+  color: #FFFFFF;
+}
+.Button.primary:hover {
+  background-color: #253237;
+  color: #FFFFFF;
+}
+.Checkbox {
+  border: none;
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  font-size: 16px;
+  font-size: 13px;
+  width: 100%;
+  line-height: 40px;
+}
+.Checkbox label {
+  padding-left: 10px;
+}
+.Checkbox input[type=checkbox] {
+  display: none;
+}
+.Checkbox input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.2em;
+  padding-left: 0.1em;
+  margin-bottom: 0.3em;
+  margin-right: 10px;
+  vertical-align: middle;
+  color: transparent;
+  transition: .2s;
+}
+.Checkbox input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+.Checkbox input[type=checkbox]:checked + label:before {
+  color: #253237;
+}
+.Checkbox.highlighted input[type=checkbox] + label:before {
+  transform: scale(1);
+  border-color: red;
+}
+.ErrorText {
+  transition-property: opacity, height;
+  transition-duration: 0.4s, 0.4s;
+  color: red;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2em;
+}
+.ErrorText.inactive {
+  opacity: 0;
+  height: 0em;
+}
+.ErrorText.active {
+  opacity: 1;
+  height: 1em;
+}
+.Input {
+  border: none;
+  border-bottom: #ebebeb 1px solid;
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  color: #404040;
+  width: 100%;
+  font-size: 16px;
+  line-height: 40px;
+  padding: 0 10px;
+  margin: 15px 0;
+  transition: border-bottom-color 0.4s;
+  background-color: #FFFFFF;
+}
+.Input.highlight {
+  border-bottom-color: red;
+}
+@keyframes fadeInLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body.no-scroll-with-modal {
+  overflow-y: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .ModalWrapper.modal-fade-appear span {
+    background-color: rgba(37, 50, 55, 0);
+    transition: background-color 0.2s;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .ModalWrapper.modal-fade-appear.modal-fade-appear-active span {
+    background-color: rgba(37, 50, 55, 0.65);
+  }
+}
+.ModalWrapper span {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  overflow-y: scroll;
+  -webkit-transform: translateZ(0);
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 1024px) {
+  .ModalWrapper span {
+    background-color: rgba(37, 50, 55, 0.65);
+  }
+}
+.ModalWrapper span .ModalWrapperInner {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  grid-template-columns: [left-card-edge] 17% [content-start] 1fr [content-end] 17% [right-card-edge];
+  grid-template-rows: [close-button-top] 50px [close-button-bottom spacer-top] 30px [spacer-bottom title-top] auto [title-bottom content-top] 1fr [content-bottom spacer-top] 5% [spacer-bottom safety-margin-top] 45px [safety-margin-bottom];
+  grid-template-areas: ".                .                 close-button  " ".                .                 .             " ".                modal-title       .             " ".                modal-content     .             " ".                .                 .             " "safety-margin    safety-margin     safety-margin";
+}
+@media screen and (min-width: 1024px) {
+  .ModalWrapper span .ModalWrapperInner {
+    max-width: 400px;
+    min-height: 558px;
+    height: auto;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0px 30px 75px 0px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 30px 75px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 30px 75px 0px rgba(0, 0, 0, 0.15);
+  }
+}
+.ModalWrapper span .ModalWrapperInner.modal-fade-enter {
+  opacity: 0.01;
+}
+.ModalWrapper span .ModalWrapperInner.modal-fade-enter.modal-fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.2s 0.2s;
+}
+.ModalWrapper span .ModalWrapperInner.modal-fade-leave {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+.ModalWrapper span .ModalWrapperInner.modal-fade-leave.modal-fade-leave-active {
+  opacity: 0.01;
+}
+.ModalWrapper span .ModalWrapperInner.modal-fade-appear {
+  opacity: 0.01;
+}
+.ModalWrapper span .ModalWrapperInner.modal-fade-appear.modal-fade-appear-active {
+  opacity: 1;
+  transition: opacity 0.2s 0.2s;
+}
+.ModalWrapper span .ModalWrapperInner .ModalWrapper-close-button-wrapper {
+  grid-area: close-button;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.ModalWrapper span .ModalWrapperInner .ModalWrapper-close-button-wrapper .ModalWrapper-close-button {
+  background: url('https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.1/collection/icon/svg/ios-close.svg') center center no-repeat;
+  width: 50px;
+  height: 50px;
+}
+.ModalWrapper span .ModalWrapperInner .ModalWrapper-title {
+  grid-area: modal-title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Questrial", sans-serif;
+  color: black;
+  line-height: 85%;
+  text-transform: uppercase;
+  font-size: 35px;
+  width: 92%;
+  justify-self: center;
+  text-align: center;
+}
+.ModalWrapper span .ModalWrapperInner .ModalWrapper-content {
+  grid-area: modal-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.ModalWrapper span .ModalWrapperInner .ModalWrapper-content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.ModalWrapper span .ModalWrapperInner .ModalWrapper-safety-margin {
+  grid-area: safety-margin;
+  height: 45px;
+}
+.TextLink {
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  font-size: 16px;
+  font-size: 13px;
+  width: 100%;
+  text-align: center;
+}
+.TextLink a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.SmallPrint {
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  font-size: 16px;
+  font-size: 13px;
+  width: 100%;
+  text-align: center;
+}
+.CustomerAccount {
+  display: flex;
+}
+.CustomerAccount .user-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.CustomerAccount .user-panel.sign-in {
+  flex-wrap: nowrap;
+}
+.CustomerAccount .user-panel .users-name {
+  white-space: nowrap;
+  font-size: calc(10px + 0.5vw);
+}
+.CustomerAccount .user-panel .user-icons {
+  display: flex;
+  align-items: center;
+}
+.CustomerAccount .user-panel .user-icons > div:not(:empty) {
+  margin-left: 10px;
+}
+.CustomerAccount .user-panel .TextLink {
+  white-space: nowrap;
+  font-size: calc(10px + 0.5vw);
+}
+.CustomerAccount .user-panel .TextLink a {
+  text-decoration: initial;
+}
+.mobileNavTop .wa-target-CustomerAccount {
+  float: right;
+}
+@media screen and (min-width: 1024px) {
+  .ModalWrapper .ModalWrapperInner.container-Signup {
+    max-width: 700px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    grid-template-columns: [left-form-edge] 48% [content-start] 1fr [content-end] 48% [right-form-edge];
+    grid-auto-rows: min-content;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "with-text        with-text         with-text     " "google-btn       .                 facebook-btn  " "or-text          or-text           or-text       " "first-name       .                 last-name     " "email            .                 telephone     " "password         .                 confirm       " "receive          .                 privacy       " "submit           submit            submit        " "error-text       error-text        error-text    " "bottom-text      bottom-text       bottom-text   ";
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-with-text {
+    grid-area: with-text;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-google-btn {
+    grid-area: google-btn;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-facebook-btn {
+    grid-area: facebook-btn;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-or-text {
+    grid-area: or-text;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-first-name {
+    grid-area: first-name;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-last-name {
+    grid-area: last-name;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-password {
+    grid-area: password;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-confirm {
+    grid-area: confirm;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-email {
+    grid-area: email;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-telephone {
+    grid-area: telephone;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-receive {
+    grid-area: receive;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-privacy {
+    grid-area: privacy;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-submit {
+    grid-area: submit;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-error-text {
+    grid-area: error-text;
+  }
+  .ModalWrapper .ModalWrapperInner.container-Signup .ModalWrapper-content.Signup > form .signup-bottom-text {
+    grid-area: bottom-text;
+  }
+}
+.EmailSignin form {
+  grid-area: modal-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.ForgotPassword form {
+  grid-area: modal-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .Alert.alert-mobile-only {
+    display: none;
+  }
+}
+.Modal .signup-error-text {
+  width: 100%;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1023px) {
+  .Modal .signup-error-text .ErrorText.alert-desktop-only {
+    display: none;
+  }
+}
+.BookAViewingButton {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}

@@ -1,0 +1,39 @@
+.CustomerAccount {
+  display: flex;
+
+  .user-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    &.sign-in {
+      flex-wrap: nowrap;
+    }
+
+    .users-name {
+      white-space: nowrap;
+      font-size: calc(~"10px + 0.5vw");
+    }
+
+    .user-icons {
+      display: flex;
+      align-items: center;
+
+      > div:not(:empty) {
+        margin-left: 10px;
+      }
+    }
+
+    .TextLink {
+      white-space: nowrap;
+      font-size: calc(~"10px + 0.5vw");
+      a {
+        text-decoration: initial;
+      }
+    }
+  }
+}
+
+.mobileNavTop .wa-target-CustomerAccount {
+  float: right;
+}

@@ -1,0 +1,27 @@
+.Alert {
+  transition: height 0.4s;
+  background-color: @neutral-colour;
+  font-size: calc(~"10px + 0.5vw");
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.inactive {
+    height: 0px;
+  }
+
+  &.active {
+    height: 35px;
+  }
+
+  &.positive {
+    background-color: @success-colour;
+  }
+
+  &.negative {
+    background-color: @error-colour;
+  }
+
+}
+

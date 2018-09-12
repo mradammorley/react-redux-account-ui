@@ -1,0 +1,36 @@
+.Button {
+  padding: 0;
+  border: 0;
+  margin: 10px 0;
+  .rounded-corners-buttons;
+  color: @primary-colour;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:12px;
+  font-weight: 400;
+  height: 50px;
+  width: 100%;
+  max-width: 280px;
+  .shadows-light;
+  -webkit-tap-highlight-color: transparent;
+  transition: box-shadow 0.4s;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    .shadows-light-hover;
+    text-decoration: none;
+    span {
+      text-decoration: none;
+    }
+  }
+
+  &.primary {
+    background-color: @primary-colour;
+    color: @secondary-colour;
+    &:hover{
+      background-color: @primary-colour;
+      color: @secondary-colour;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import (once) "../utils/breakpoints.less";
+
+.ModalWrapper .ModalWrapperInner.container-Signup {
+  .breakpoint-desktop ({
+    max-width: 700px;
+    height: auto;
+  });
+
+  .ModalWrapper-content.Signup > form{
+
+    .breakpoint-desktop ({
+      display: grid;
+      width: 100%;
+      height: 100%;
+      background-color: @default-bg-colour;
+
+      grid-template-columns: ~"[left-form-edge] 48% [content-start] 1fr [content-end] 48% [right-form-edge]";
+      grid-auto-rows: min-content;
+      justify-items: center;
+      align-items: center;
+
+      grid-template-areas:
+          "with-text        with-text         with-text     "
+          "google-btn       .                 facebook-btn  "
+          "or-text          or-text           or-text       "
+          "first-name       .                 last-name     "
+          "email            .                 telephone     "
+          "password         .                 confirm       "
+          "receive          .                 privacy       "
+          "submit           submit            submit        "
+          "error-text       error-text        error-text    "
+          "bottom-text      bottom-text       bottom-text   ";
+
+      .signup-with-text {         grid-area: with-text;}
+      .signup-google-btn {        grid-area: google-btn;}
+      .signup-facebook-btn {      grid-area: facebook-btn;}
+      .signup-or-text {           grid-area: or-text;}
+      .signup-first-name {        grid-area: first-name;}
+      .signup-last-name {         grid-area: last-name;}
+      .signup-password {          grid-area: password;}
+      .signup-confirm {           grid-area: confirm;}
+      .signup-email {             grid-area: email;}
+      .signup-telephone {         grid-area: telephone;}
+      .signup-receive {           grid-area: receive;}
+      .signup-privacy {           grid-area: privacy;}
+      .signup-submit {            grid-area: submit;}
+      .signup-error-text {        grid-area: error-text;}
+      .signup-bottom-text {       grid-area: bottom-text;}
+    });
+  }
+}
+

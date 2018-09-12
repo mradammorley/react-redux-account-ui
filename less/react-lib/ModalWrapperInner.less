@@ -1,0 +1,100 @@
+@import (once) "../utils/breakpoints.less";
+@import (once) "../utils/shadows.less";
+@import (once) "../utils/rounded-corners.less";
+@import (once) "../utils/typography.less";
+@import (once) "../utils/colours.less";
+
+@mw-desktop-container-width: 400px;
+@mw-desktop-container-height: 558px;
+@mw-close-button-size: 50px;
+
+.ModalWrapper span {
+
+  .ModalWrapperInner {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: @default-bg-colour;
+
+    grid-template-columns: ~"[left-card-edge] 17% [content-start] 1fr [content-end] 17% [right-card-edge]";
+    grid-template-rows: ~"[close-button-top] 50px [close-button-bottom spacer-top] 30px [spacer-bottom title-top] auto [title-bottom content-top] 1fr [content-bottom spacer-top] 5% [spacer-bottom safety-margin-top] 45px [safety-margin-bottom]";
+
+    grid-template-areas: ".                .                 close-button  " ".                .                 .             " ".                modal-title       .             " ".                modal-content     .             " ".                .                 .             " "safety-margin    safety-margin     safety-margin";
+
+    .breakpoint-desktop({ max-width: @mw-desktop-container-width; min-height: @mw-desktop-container-height; height: auto; .rounded-corners; .shadows-modal; });
+
+    &.modal-fade-enter {
+      opacity: 0.01;
+
+      &.modal-fade-enter-active {
+        opacity: 1;
+        transition: opacity 0.2s 0.2s;
+      }
+    }
+
+    &.modal-fade-leave {
+      opacity: 1;
+      transition: opacity 0.2s;
+
+      &.modal-fade-leave-active {
+        opacity: 0.01;
+      }
+    }
+
+    &.modal-fade-appear {
+      opacity: 0.01;
+
+      &.modal-fade-appear-active {
+        opacity: 1;
+        transition: opacity 0.2s 0.2s;
+      }
+    }
+
+    .ModalWrapper-close-button-wrapper {
+      grid-area: close-button;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+
+      .ModalWrapper-close-button {
+        background: url('https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.1/collection/icon/svg/ios-close.svg') center center no-repeat;
+        width: @mw-close-button-size;
+        height: @mw-close-button-size;
+      }
+    }
+
+    .ModalWrapper-title {
+      grid-area: modal-title;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .heading-primary;
+      font-size: 35px;
+      width: 92%;
+      justify-self: center;
+      text-align: center;
+    }
+
+    .ModalWrapper-content {
+      grid-area: modal-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .ModalWrapper-safety-margin {
+      grid-area: safety-margin;
+      height: 45px;
+    }
+  }
+}

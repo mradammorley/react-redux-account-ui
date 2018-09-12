@@ -1,0 +1,44 @@
+.Checkbox {
+  border: none;
+  .small-text;
+  width: 100%;
+  line-height: 40px;
+
+  label {
+    padding-left: 10px;
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  input[type=checkbox] + label:before {
+    content: "\2714";
+    border: 0.1em solid #000;
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
+    padding-left: 0.1em;
+    margin-bottom: 0.3em;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: transparent;
+    transition: .2s;
+  }
+
+  input[type=checkbox] + label:active:before {
+    transform: scale(0);
+  }
+
+  input[type=checkbox]:checked + label:before {
+    color: @primary-colour;
+  }
+
+  &.highlighted {
+    input[type=checkbox] + label:before {
+      transform: scale(1);
+      border-color: @error-colour;
+    }
+  }
+}

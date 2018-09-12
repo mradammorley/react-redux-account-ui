@@ -1,0 +1,55 @@
+@import (once) "../utils/breakpoints.less";
+@import (once) "../utils/colours.less";
+
+
+@mw-background-opacity: 0.65;
+
+@keyframes fadeInLoad {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+body.no-scroll-with-modal {
+  overflow-y: hidden;
+}
+
+.ModalWrapper {
+
+  &.modal-fade-appear {
+    .breakpoint-desktop ({
+      span {
+        background-color: rgba(37, 50, 55, 0);
+        transition: background-color 0.2s;
+      }
+    });
+
+    &.modal-fade-appear-active {
+      .breakpoint-desktop ({
+        span {
+          background-color: rgba(37, 50, 55, @mw-background-opacity);
+        }
+      });
+    }
+  }
+
+  span {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    overflow-y: scroll;
+    -webkit-transform: translateZ(0);
+    background-color: @default-bg-colour;
+
+    .breakpoint-desktop ({
+      background-color: rgba(37, 50, 55, @mw-background-opacity);
+    });
+  }
+}

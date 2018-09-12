@@ -1,0 +1,172 @@
+// The MIT License (MIT)
+//
+// Copyright (c) 2011-2014 Webcomm Pty Ltd
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+
+// This variable must be declared here rather
+// than in an included file. This is the path
+// to Bootstrap's LESS files, relative to
+// this file.
+@bootstrap-path: "../../../bower_components/bootstrap/less";
+
+// Magento (Global)
+@import "old/magento.less";
+
+// Bootstrap (Global)
+// These are files which import core bootstrap less files and build on or adapt bootstrap files
+// If style are related to the name of the file but not bootstrap, they should be stored elsewhere
+@import "bootstrap/mixins.less";
+@import "bootstrap/normalize.less";
+@import "bootstrap/print.less";
+@import "bootstrap/scaffolding.less";
+@import "bootstrap/type.less";
+@import "bootstrap/grid.less";
+@import "bootstrap/tables.less";
+@import "bootstrap/forms.less";
+@import "bootstrap/buttons.less";
+@import "bootstrap/navbar.less";
+@import "bootstrap/component-animations.less";
+@import "bootstrap/dropdowns.less";
+@import "bootstrap/input-groups.less";
+@import "bootstrap/breadcrumbs.less";
+@import "bootstrap/pagination.less";
+@import "bootstrap/alerts.less";
+@import "bootstrap/list-group.less";
+@import "bootstrap/panels.less";
+@import "bootstrap/wells.less";
+@import "bootstrap/close.less";
+@import "bootstrap/utilities.less";
+@import "bootstrap/responsive-utilities.less";
+@import "bootstrap/variables.less";
+@import "bootstrap/modals.less";
+@import "bootstrap/popovers.less";
+@import "bootstrap/carousel.less";
+
+// Base (Global)
+@import "base/base.less";
+@import "base/typography.less";
+
+// Layout (Global)
+@import "layout/containers.less";
+@import "layout/blocks.less";
+
+// Elements (Global)
+@import "elements/icons.less";
+@import "elements/footer.less";
+@import "elements/lists.less";
+@import "elements/categories.less";
+@import "base/misc.less";
+@import "old/logos.less";
+@import "old/languages.less";
+@import "old/search.less";
+@import "old/products.less";
+@import "old/prices.less";
+@import "old/ratings.less";
+@import "old/content.less";
+@import "old/customer.less";
+@import "elements/datepicker.less";
+@import "elements/dropkick.less";
+@import "elements/sagepay.less";
+
+@import "old/header.less";
+
+@import "pages/brandpage.less";
+@import "old/category-page.less";
+@import "old/gc.less";
+//@import "category-landing.less";
+@import "old/product.less";
+
+@import "pages/product/plain-rings.less";
+
+// Utility classes (Global)
+@import "utils/animations.less";
+@import "utils/material.less";
+@import "utils/breakpoints.less";
+@import "utils/misc.less";
+@import "utils/alignment.less";
+@import "utils/sections.less";
+@import "utils/gradients.less";
+@import "utils/shadows.less";
+
+
+// Account 
+@import "account/account.less";
+@import "account/moodboard.less";
+// @import "loveboard/loveboard-variables.less";
+// @import "loveboard/loveboard-shared.less";
+// @import "loveboard/loveboard-header.less";
+// @import "loveboard/loveboard-content.less";
+
+// react-lib
+@import "react-lib/Alert.less";
+@import "react-lib/Button.less";
+@import "react-lib/Checkbox.less";
+@import "react-lib/ErrorText.less";
+@import "react-lib/Input.less";
+@import "react-lib/ModalWrapper.less";
+@import "react-lib/ModalWrapperInner.less";
+@import "react-lib/TextLink.less";
+@import "react-lib/FacebookSigninButton.less";
+@import "react-lib/GoogleSigninButton.less";
+@import "react-lib/SmallPrint.less";
+
+// signup
+@import "signup/CustomerAccount.less";
+@import "signup/Signup.less";
+@import "signup/EmailSignin.less";
+@import "signup/ForgotPassword.less";
+@import "signup/SignupAlert.less";
+@import "signup/Modal.less";
+@import "signup/BookAViewingButton.less";
+
+
+// Pages (Local: All styles in these files should be wrapped in a class that is unique to the page)
+@import "pages/404.less";
+
+@import "pages/cart.less";
+@import "pages/checkout.less";
+@import "pages/press-pages.less";
+@import "pages/product-compare.less";
+@import "pages/visitus.less";
+@import "pages/makeyourown.less";
+@import "pages/careers.less";
+@import "pages/listingpage.less";
+
+// Campaigns (Local: All styles in these files should be wrapped in a class that is unique to the campaign)
+@import "campaigns/lovestrike/product.less";
+@import "campaigns/lovestrike/components/product-attributes.less";
+@import "campaigns/lovestrike/products.less";
+@import "campaigns/lovestrike/categories.less";
+@import "campaigns/lovestrike/bracelet.less";
+
+
+// Components (Local: All styles in these files should be wrapped in a class that is unique to the component)
+@import "components/product-attributes.less";
+@import "components/slickslider.less";
+//@import "components/videoplayer.less";
+@import "components/navbar.less";
+@import "components/header/header-checkout.less";
+@import "components/wordsanim.less";
+@import "components/perspectivephoto.less";
+@import "components/banners.less";
+
+
+@import "modals/bookings.less";
+@import "modals/ajaxlogin.less";
